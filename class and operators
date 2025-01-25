@@ -1,0 +1,23 @@
+class Human:# first give name to class
+    def __init__(self,name:str,gender:str,eye=2,leg=2,sibling=0,family_property=0): # in class assign how many operator you want anf the type of that operator and assign nif neccesary default value
+        assert eye>=0,'eyes cannot be negative' # used where we want pass condition in operator
+        assert leg>=0,'Leg cannot be negative' 
+        self.name = name # give name
+        self.gender = gender
+        self.eye = eye
+        self.leg = leg
+        self.sibling = sibling
+        self.family_property = family_property
+        print(f'created{self.name}') #print your human created
+
+
+    def calculate_money(self): function for calculation money
+        return self.family_property/self.sibling
+
+    def calculate_bmi(self,height,weight): # function for calculation bmi
+        return weight/height**2*10000
+
+human1=Human('dipesh','male',2,2,1,10000) #call class and put value in it
+human2= Human('bhavana','female',2,2,2,10000000) 
+print(human1.calculate_money()) # print how much money your human1 get 
+print(human2.calculate_money()) # print how much money your human2 get
